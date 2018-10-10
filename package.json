@@ -1,0 +1,17 @@
+{
+  "name": "zacbrowncollection",
+  "version": "1.0.0",
+  "description": "Website build and WordPress theme for the Zac Brown Colleciton website.",
+  "main": "index.js",
+  "scripts": {
+    "watch": "gulp watch"
+  },
+  "author": "Ferris Thomas",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-sass": "^4.0.1",
+    "gulp-sourcemaps": "^2.6.4",
+    "yargs": "^12.0.2"
+  }
+}

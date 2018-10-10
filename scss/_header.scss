@@ -1,0 +1,110 @@
+/* HEADER */
+html {
+  body {
+    header {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      height: 150px;
+      .logo {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        height: 111px;
+        .logo-link {
+          display: inline-block;
+          .logo-img {
+            height: 70px;
+            width: auto;
+          }
+        }
+        .tagline-img {
+          width: 497px;
+          height: 67px;
+        }
+      }
+
+      @include tablet{
+        height: auto;
+        .logo{
+          flex-direction: column;
+          justify-content: flex-start;
+          height: auto;
+          .logo-link{
+            .logo-img{
+              margin: 20px 0 20px;
+            }
+          }
+          .tagline-img{
+            margin: 0 0 55px 0;
+            max-width: 497px;
+            width: 90%;
+            height: auto;
+          }
+        }
+      }
+
+      &.home {
+        height: 512px;
+        align-items: flex-start;
+        justify-content: flex-start;
+        .logo {
+          flex-direction: column;
+          padding: 0 0 0 14%;
+          height: 473px;
+          justify-content:center;
+          .header-zac {
+            position: absolute;
+            left: 523px;
+            top: 1px;
+            z-index: 0;
+          }
+          .logo-link {
+            margin: 0 0 20px 0;
+            z-index: 1;
+            .logo-img {
+              height: 180px;
+              width: 205px;
+            }
+          }
+          .tagline-img {
+            width: 455px;
+            height: auto;
+            z-index: 2;
+          }
+          @include desktop {
+            .header-zac {
+              left: 51%;
+            }
+          }
+          @include tablet {
+            width: 100%;
+            margin: 0 auto;
+            padding: 0;
+            padding-top: 20px;
+            .header-zac {
+              display: none;
+            }
+            .logo-link {
+              display: block;
+              width: 100%;
+              text-align: center;
+              .logo-img{
+                height: auto;
+                width: 36.4%;
+                min-width: 200px;
+              }
+            }
+            .tagline-img{
+              width: 59.2%;
+              min-width: 300px;
+              height: auto;
+            }
+          }
+        }
+      }
+    }
+  }
+}

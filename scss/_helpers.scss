@@ -1,0 +1,51 @@
+@mixin clearfix() {
+  &::after {
+    display: block;
+    content: "";
+    clear: both;
+  }
+}
+
+@mixin extra-small {
+	@media (max-width: $extra-small){
+		@content;
+	}
+}
+@mixin small {
+	@media (max-width: $small){
+		@content;
+	}
+}
+@mixin tablet{
+	@media (max-width: $tablet){
+		@content;
+	}
+}
+@mixin desktop {
+	@media (max-width: $desktop){
+		@content;
+	}
+}
+@mixin large-desktop {
+	@media (max-width: $large-desktop){
+		@content;
+	}
+}
+@mixin massive-desktop{
+	@media (max-width: $massive-desktop){
+		@content;
+	}
+}
+
+@mixin retina {
+  @media
+    only screen and (-webkit-min-device-pixel-ratio: 2),
+    only screen and (min--moz-device-pixel-ratio: 2),
+    only screen and (-o-min-device-pixel-ratio: 2/1),
+    only screen and (min-device-pixel-ratio: 2),
+    only screen and (min-resolution: 192dpi),
+    only screen and (min-resolution: 2dppx) {
+    @content;
+  }
+}
+

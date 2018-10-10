@@ -1,0 +1,47 @@
+@mixin font-output($family, $weight, $style, $size, $lineHeight){
+
+  //$family : unquote($family);
+
+  @if not $lineHeight and not $size {
+    font-family: $family;
+    font-weight: $weight;
+    font-style: $style;
+  } @else if not $lineHeight {
+    font: $style $weight $size $family;
+  } @else if unit($size) == unit($lineHeight) {
+    $newLineHeight : $lineHeight / $size;
+    font: $style $weight unquote("#{$size}/#{$newLineHeight}") $family;
+  } @else {
+    font: $style $weight unquote("#{$size}/#{$lineHeight}") $family;
+  }
+}
+
+@mixin font-condensed($size: null, $lineHeight: null){
+  @include font-output($base-font-condensed, normal, normal, $size, $lineHeight);
+}
+
+@mixin font-medium($size: null, $lineHeight: null){
+  @include font-output($base-font, normal, normal, $size, $lineHeight);
+}
+
+@mixin font-light($size: null, $lineHeight: null){
+  @include font-output($base-font-light, normal, normal, $size, $lineHeight);
+}
+
+@font-face {
+    font-family: 'edmondsansmedium';
+    src: url('./fonts/edmondsans-medium-webfont.woff2') format('woff2'),
+         url('./fonts/edmondsans-medium-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+  font-family: 'merriweatherlight';
+  src: url('./fonts/merriweather-light-webfont.woff2') format('woff2'),
+  url('./fonts/merriweather-light-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
