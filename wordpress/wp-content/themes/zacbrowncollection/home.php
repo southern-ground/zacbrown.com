@@ -92,7 +92,9 @@ get_header(); ?>
         <div class="bottom">
             <h2><?= the_field('title') ?></h2>
             <?= the_Field('copy') ?>
-            <img class="bottom-logo" src="<?= get_template_directory_uri() ?>/img/logo.svg" />
+            <a href="#" class="scroll-to-top">
+                <img class="bottom-logo" src="<?= get_template_directory_uri() ?>/img/logo.svg"/>
+            </a>
         </div>
     </section>
 </main>

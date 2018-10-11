@@ -3,7 +3,7 @@ html, body {
   padding: 0;
   margin: 0;
   @include font-medium(12px, 1.4);
-  background-color: $black;
+  background-color: $true-black;
   color: $off-white;
 }
 
