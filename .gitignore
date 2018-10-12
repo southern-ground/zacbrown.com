@@ -4,3 +4,4 @@ wordpress/wp-content/plugins
 wordpress/wp-config.php
 wordpress/wp-sample-config.php
 src
+wp-config-sample.php
