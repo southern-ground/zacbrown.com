@@ -22,6 +22,8 @@
         });
         </script>
 
+        <script src="<?=get_template_directory_uri()?>/js/scripts.js"></script>
+
 	</head>
 	<body <?php body_class(); ?>>
 
@@ -34,27 +36,19 @@
 					<!-- logo -->
 					<div class="logo">
 
-						<?php if(is_front_page()){
-							?>
-							<img class="header-zac"
-							src="<?php echo get_template_directory_uri(); ?>/img/zac-header.png" >
-							<?php
-						}
-						?>
-
 						<a class="logo-link" href="<?php echo home_url(); ?>">
 
                             <img class="logo-img"
                                  src="<?php echo get_template_directory_uri(); ?>/img/logo-<?= is_front_page() ? 'vertical' : 'horizontal' ?>.svg"
                                  alt="Home"
-                                 title="Zac Brown Collection">
+                                 title="Zac Brown Collective">
 
                         </a>
 
                         <img class="tagline-img"
                              src="<?php echo get_template_directory_uri(); ?>/img/true_american_original-<?= is_front_page() ? 'two-lines' : 'one-line' ?>.png"
-                             alt="True American Original"
-                             title="True American Original">
+                             alt="True American Originals"
+                             title="True American Originals">
 
 					</div>
 					<!-- /logo -->

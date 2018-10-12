@@ -1,3 +1,6 @@
 wordpress/wp-includes
 wordpress/wp-admin
+wordpress/wp-content/plugins
+wordpress/wp-config.php
+wordpress/wp-sample-config.php
 src
