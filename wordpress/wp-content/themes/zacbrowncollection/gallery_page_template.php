@@ -12,7 +12,7 @@ get_header(); ?>
             <div class="brand-container">
                 <h1>
                     <img class="brand-logo"
-                         src="<?= get_template_directory_uri() ?>/img/zb_customs/<?= get_field('logo') ?>"/>
+                         src="<?= get_template_directory_uri() ?>/img/<?=get_field('custom_identifier')?>/<?= get_field('logo') ?>"/>
                 </h1>
                 <h2 class="brand-tagline">
                     <?= get_field('tagline') ?>

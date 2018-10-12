@@ -17,7 +17,7 @@ html {
       padding: 0 10px;
       position: relative;
     }
-    ul{
+    ul {
       padding: 0;
       margin: 0;
       list-style: none;
@@ -196,12 +196,15 @@ main {
   margin: 0 10px;
 
   section.brand {
-    background-position: top right;
+    margin: 0 auto;
+    background-position: center right;
     background-repeat: no-repeat;
-    min-height: 927px;
-    @include desktop{
+    @include desktop {
       background-image: none !important;
       min-height: auto;
+      .brand-container {
+        width: auto;
+      }
     }
     display: flex;
     flex-direction: column;
@@ -209,24 +212,24 @@ main {
     justify-content: center;
     .brand-container {
       width: 50%;
-      @include desktop{
-        width: 100%;
+      h1 {
+        margin: 0;
+        padding: 0;
+        .brand-logo {
+          height: auto;
+          max-width: 100%;
+        }
       }
-      .brand-logo {
-        fill: $off-white;
-        stroke: $off-white;
-        height: auto;
-        max-width: 100%;
-        margin: 20px 0 40px;
-      }
+
       .brand-tagline {
         @include font-medium(26px);
+        color: $yellow;
         letter-spacing: 2.7px;
         text-transform: uppercase;
       }
       .brand-copy {
         @include font-light(16px, 32px);
-        line-spacing: 38px;
+        line-height: 38px;
       }
       .brand-link {
         text-transform: uppercase;
@@ -253,40 +256,82 @@ main {
             font-size: 0;
           }
           &.facebook {
-            a:after{
+            a:after {
               content: url('img/social/facebook.png');
             }
           }
           &.instagram {
-            a:after{
+            a:after {
               content: url('img/social/instagram.png');
             }
           }
         }
       }
     }
-
   }
 
-  .brand-gallery{
+  .brand-gallery {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 100%;
-    &-title{
+    &-title {
       @include font-medium(26px);
       letter-spacing: 2.7px;
       text-transform: uppercase;
     }
   }
 
-  &#zb-customs {
-    .brand-container {
-      .brand-logo {
-        width: 380px;
+  &#zb_customs {
+    section.brand {
+      width: 1024px;
+      min-height: 927px;
+      .brand-container {
+        .brand-logo {
+          width: 380px;
+        }
       }
     }
+    @include desktop() {
+      section.brand {
+        width: auto;
+        .brand-container {
+          width: auto;
+        }
+      }
+    }
+  }
+
+  &#demerbox {
+    section.brand {
+      padding: 135px 0 0 0;
+      width: 1000px;
+      margin: 0 auto;
+      background-position: center right;
+      .brand-container {
+        h1 {
+          margin-top: 20px;
+          margin: 0 0 20px 0;
+          padding: 0;
+        }
+        .brand-logo {
+          width: 420px;
+          height: auto;
+          margin: 0 0 20px;
+        }
+      }
+    }
+
+    @include desktop {
+      section.brand {
+        width: auto;
+        .brand-container {
+          width: auto;
+        }
+      }
+    }
+
   }
 
 }
