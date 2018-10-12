@@ -5,3 +5,6 @@ wordpress/wp-config.php
 wordpress/wp-config-sample.php
 src
 wp-config-sample.php
+wordfence-waf.php
+wordpress/wp-content/wflogs
+wordpress/.htaccess
