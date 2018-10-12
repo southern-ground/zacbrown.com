@@ -1,7 +1,7 @@
 {
-  "name": "zacbrowncollection",
+  "name": "zacbrowncollective",
   "version": "1.0.0",
-  "description": "Website build and WordPress theme for the Zac Brown Colleciton website.",
+  "description": "Website build and WordPress theme for the Zac Brown Collective website.",
   "main": "index.js",
   "scripts": {
     "watch": "gulp watch"

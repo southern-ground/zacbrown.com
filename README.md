@@ -1,8 +1,8 @@
-# Zac Brown Collection
+# Zac Brown Collective
 
 ## Description
 
-This project is a WordPress theme for the Zac Brown Collection website.
+This project is a WordPress theme for the Zac Brown Collective website.
 
 It is a standard WordPress theme based on the HTML5 Blank template (http://html5blank.com)
 and using a Gulp build process to allow the CSS to be written in SASS/SCSS with appropriate
