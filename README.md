@@ -1,4 +1,4 @@
-# Zac Brown Collection
+# Zac Brown Collective
 
 ## Description
 
