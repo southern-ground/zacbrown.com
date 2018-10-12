@@ -17,10 +17,15 @@ html {
       padding: 0 10px;
       position: relative;
     }
+    ul{
+      padding: 0;
+      margin: 0;
+      list-style: none;
+    }
   }
 }
 
-ul{
+ul {
   &.one-up {
     margin: 30px 0 0 0;
     padding: 0;
@@ -32,11 +37,11 @@ ul{
       overflow: hidden;
       position: relative;
       pointer-events: none;
-      .one-up--background{
+      .one-up--background {
         z-index: 0;
       }
-      &:hover{
-        .hover{
+      &:hover {
+        .hover {
           opacity: 1;
         }
       }
@@ -50,13 +55,13 @@ ul{
         color: inherit;
         pointer-events: auto;
       }
-      .hover{
+      .hover {
         position: absolute;
         top: 0;
         left: 0;
         height: 100%;
         width: 100%;
-        background-color: rgba(255,255,255, 0.2);
+        background-color: rgba(255, 255, 255, 0.2);
         -webkit-transition: opacity 1s; /* Safari */
         transition: opacity 1s;
         opacity: 0;
@@ -95,7 +100,7 @@ ul{
     justify-content: space-evenly;
     li {
       max-width: 425px;
-      min-width:358px;
+      min-width: 358px;
       max-height: 370px;
       background-repeat: no-repeat;
       background-size: cover;
@@ -104,8 +109,8 @@ ul{
       margin: 0 7px;
       position: relative;
       pointer-events: none;
-      &:hover{
-        .hover{
+      &:hover {
+        .hover {
           opacity: 1;
         }
       }
@@ -119,13 +124,13 @@ ul{
         color: inherit;
         pointer-events: auto;
       }
-      .hover{
+      .hover {
         position: absolute;
         top: 0;
         left: 0;
         height: 100%;
         width: 100%;
-        background-color: rgba(255,255,255, 0.2);
+        background-color: rgba(255, 255, 255, 0.2);
         -webkit-transition: opacity 1s; /* Safari */
         transition: opacity 1s;
         opacity: 0;
@@ -154,34 +159,135 @@ ul{
 
       }
     }
-    @include desktop{
+    @include desktop {
       flex-wrap: wrap;
-      li{
-        min-width:358px;
+      li {
+        min-width: 358px;
         margin-bottom: 20px;
       }
     }
   }
 }
 
-.bottom{
+.bottom {
   margin: 90px auto 0 auto;
   text-align: center;
   width: 100%;
   max-width: 800px;
-  h2{
+  h2 {
     @include font-medium(26px);
     letter-spacing: 6.5px;
     color: $yellow;
     text-transform: uppercase;
     margin: 0 20px 50px 20px;
   }
-  p{
+  p {
     @include font-light(16px, 40px);
     margin: 0 20px;
   }
-  .bottom-logo{
+  .bottom-logo {
     height: 80px;
     margin: 20px 0 0;
   }
 }
+
+main {
+
+  margin: 0 10px;
+
+  section.brand {
+    background-position: top right;
+    background-repeat: no-repeat;
+    min-height: 927px;
+    @include desktop{
+      background-image: none !important;
+      min-height: auto;
+    }
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    .brand-container {
+      width: 50%;
+      @include desktop{
+        width: 100%;
+      }
+      .brand-logo {
+        fill: $off-white;
+        stroke: $off-white;
+        height: auto;
+        max-width: 100%;
+        margin: 20px 0 40px;
+      }
+      .brand-tagline {
+        @include font-medium(26px);
+        letter-spacing: 2.7px;
+        text-transform: uppercase;
+      }
+      .brand-copy {
+        @include font-light(16px, 32px);
+        line-spacing: 38px;
+      }
+      .brand-link {
+        text-transform: uppercase;
+        color: $yellow;
+        position: relative;
+        letter-spacing: 3.5px;
+        @include font-medium(14px);
+        &:after {
+          content: url('img/after-arrow.png');
+          position: relative;
+          top: 6px
+        }
+      }
+      .brand-social {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        display: flex;
+        margin: 40px 0 0;
+        li {
+          margin: 0 20px 0 0;
+          a {
+            color: inherit;
+            font-size: 0;
+          }
+          &.facebook {
+            a:after{
+              content: url('img/social/facebook.png');
+            }
+          }
+          &.instagram {
+            a:after{
+              content: url('img/social/instagram.png');
+            }
+          }
+        }
+      }
+    }
+
+  }
+
+  .brand-gallery{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    &-title{
+      @include font-medium(26px);
+      letter-spacing: 2.7px;
+      text-transform: uppercase;
+    }
+  }
+
+  &#zb-customs {
+    .brand-container {
+      .brand-logo {
+        width: 380px;
+      }
+    }
+  }
+
+}
+
