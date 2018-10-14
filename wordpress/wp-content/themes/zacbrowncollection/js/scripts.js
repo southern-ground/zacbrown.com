@@ -14,7 +14,13 @@
       scrollToTop();
       return false;
     });
-		
+
+    $('#nav-toggle').click(function(e){
+      $('header nav').addClass('open');
+      $('header div.nav-toggle').removeClass('open');
+      return false;
+    });
+
 	});
 	
 })(jQuery, this);
