@@ -1,18 +1,21 @@
 <?php /* Template Name: Gallery Page Template */
 get_header(); ?>
 
-<main id="<?= get_field('custom_identifier') ?>" class="sub-page" role="main">
+<main id="<?= get_field('custom_identifier') ?>"
+      class="sub-page"
+      role="main"
+      style="background-image:url(<?= get_field('side_image')['url'] ?>">
+
     <!-- section -->
 
-    <section class="brand"
-             style="background-image:url(<?= get_field('side_image')['url'] ?>">
+    <section class="brand">
 
         <?php if (get_field('logo')): ?>
 
             <div class="brand-container">
                 <h1>
                     <img class="brand-logo"
-                         src="<?= get_template_directory_uri() ?>/img/<?=get_field('custom_identifier')?>/<?= get_field('logo') ?>"/>
+                         src="<?= get_template_directory_uri() ?>/img/brands/<?= get_field('custom_identifier') ?>/<?= get_field('logo') ?>"/>
                 </h1>
                 <h2 class="brand-tagline">
                     <?= get_field('tagline') ?>
@@ -57,10 +60,6 @@ get_header(); ?>
                     ?>
                 </ul>
 
-
-                <ul class="brand-social">
-
-                </ul>
             </div>
 
         <?php endif; ?>
@@ -71,22 +70,12 @@ get_header(); ?>
 
         <h2 class="brand-gallery-title"><?= the_field('gallery_title') ?></h2>
 
-        <ul class="brand-gallery-images">
-            <?php
-            if (have_rows('gallery_images')):
+        <?php
 
-                while (have_rows('gallery_images')) : the_row();
-                    $image = get_sub_field('gallery_image');
-                    ?>
+        $brandGallery = get_field('gallery_images');
 
-                    <li><img src="<?= $image['url'] ?>"/></li>
+        ?>
 
-                <?php
-                endwhile;
-            endif;
-            ?>
-
-        </ul>
     </section>
 
 </main>
