@@ -8,3 +8,4 @@ wp-config-sample.php
 wordfence-waf.php
 wordpress/wp-content/wflogs
 wordpress/.htaccess
+wordpress/stage
