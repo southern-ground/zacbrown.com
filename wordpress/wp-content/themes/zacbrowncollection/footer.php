@@ -1,15 +1,23 @@
 			<!-- footer -->
 			<footer class="footer" role="contentinfo">
 				<!-- Left-Side -->
-				<div>
+				<div class="copyright">
 					 &copy; 2018 Zac Brown collective. All Rights Reserved.
 				</div>
 
 				<!-- Right Side -->
-				<div>
-					<a href="#">Terms of Use</a>
-					<a href="#">Privacy Policy</a>
-					<a href="#">Contact Us</a>
+				<div class="links-container">
+                    <ul class="footer-links">
+                        <li>
+                            <a href="/terms-of-use">Terms of Use</a>
+                        </li>
+                        <li>
+                            <a href="/privacy-policy">Privacy Policy</a>
+                        </li>
+                        <li>
+                            <a href="/contact-us">Contact Us</a>
+                        </li>
+                    </ul>
 				</div>
 
 			</footer>

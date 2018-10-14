@@ -7,6 +7,22 @@ html {
       flex-direction: column;
       justify-content: flex-start;
       height: 150px;
+
+      div.nav-toggle{
+        display:none;
+        border-top: 1px solid $yellow;
+        border-bottom: 1px solid $yellow;
+        position: relative;
+        justify-content: flex-end;
+        a#nav-toggle{
+          padding: 5px;
+          img.hamburger{
+            width: 30px;
+            height: 30px;
+          }
+        }
+      }
+
       .logo {
         display: flex;
         flex-direction: row;
@@ -28,6 +44,12 @@ html {
 
       @include tablet {
         height: auto;
+        div.nav-toggle{
+          display: flex;
+          &:not(.open){
+            display: none;
+          }
+        }
         .logo {
           flex-direction: column;
           justify-content: flex-start;
@@ -45,7 +67,11 @@ html {
           }
         }
       }
-
+      @include small{
+        .logo > .tagline-img{
+          margin: 0 0 20px 0;
+        }
+      }
       &.home {
         height: 512px;
         align-items: flex-start;
