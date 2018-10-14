@@ -28,6 +28,10 @@
   @include font-output($base-font-light, normal, normal, $size, $lineHeight);
 }
 
+@mixin font-bold($size: null, $lineHeight: null){
+  @include font-output($base-font-bold, normal, normal, $size, $lineHeight);
+}
+
 @font-face {
     font-family: 'edmondsansmedium';
     src: url('./fonts/edmondsans-medium-webfont.woff2') format('woff2'),
@@ -41,6 +45,15 @@
   font-family: 'merriweatherlight';
   src: url('./fonts/merriweather-light-webfont.woff2') format('woff2'),
   url('./fonts/merriweather-light-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+@font-face {
+  font-family: 'brandon_grotesquebold';
+  src: url('./fonts/brandon_bld-webfont.woff2') format('woff2'),
+  url('./fonts/brandon_bld-webfont.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 
