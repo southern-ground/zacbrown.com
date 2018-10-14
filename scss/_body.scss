@@ -21,318 +21,391 @@ html {
       padding: 0;
       margin: 0;
       list-style: none;
-    }
-  }
-}
-
-ul {
-  &.one-up {
-    margin: 30px 0 0 0;
-    padding: 0;
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    li {
-      overflow: hidden;
-      position: relative;
-      pointer-events: none;
-      .one-up--background {
-        z-index: 0;
-      }
-      &:hover {
-        .hover {
-          opacity: 1;
-        }
-      }
-      &:first-child {
-        margin: 0 0 20px;
-      }
-      &:last-child {
-        margin-right: 0;
-      }
-      a {
-        color: inherit;
-        pointer-events: auto;
-      }
-      .hover {
-        position: absolute;
-        top: 0;
-        left: 0;
-        height: 100%;
-        width: 100%;
-        background-color: rgba(255, 255, 255, 0.2);
-        -webkit-transition: opacity 1s; /* Safari */
-        transition: opacity 1s;
-        opacity: 0;
-      }
-      .one-up--item-info {
-        position: absolute;
-        bottom: 15px;
-        color: $yellow;
-        text-transform: uppercase;
-        text-align: center;
-        width: 100%;
-        .one-up--item-brand-name {
-          font-size: 25px;
-          color: $off-white;
-          letter-spacing: 2.7px;
-        }
-      }
-      .one-up--item-brand-meet {
-        font-size: 14px;
-        position: relative;
-        &:after {
-          content: url('img/after-arrow.png');
-          position: relative;
-          top: 6px
-        }
-
-      }
-    }
-  }
-  &.three-up {
-    margin: 30px 0 0 0;
-    padding: 0;
-    list-style: none;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    li {
-      max-width: 425px;
-      min-width: 358px;
-      max-height: 370px;
-      background-repeat: no-repeat;
-      background-size: cover;
-      background-position: right bottom;
-      overflow: hidden;
-      margin: 0 7px;
-      position: relative;
-      pointer-events: none;
-      &:hover {
-        .hover {
-          opacity: 1;
-        }
-      }
-      &:first-child {
-        margin-left: 0;
-      }
-      &:last-child {
-        margin-right: 0;
-      }
-      a {
-        color: inherit;
-        pointer-events: auto;
-      }
-      .hover {
-        position: absolute;
-        top: 0;
-        left: 0;
-        height: 100%;
-        width: 100%;
-        background-color: rgba(255, 255, 255, 0.2);
-        -webkit-transition: opacity 1s; /* Safari */
-        transition: opacity 1s;
-        opacity: 0;
-      }
-      .three-up--item-info {
-        position: absolute;
-        bottom: 15px;
-        left: 30px;
-        color: $yellow;
-        text-transform: uppercase;
-        right: 50%;
-        .three-up--item-brand-name {
-          font-size: 25px;
-          color: $off-white;
-          letter-spacing: 2.7px;
-        }
-      }
-      .three-up--item-brand-meet {
-        font-size: 14px;
-        position: relative;
-        &:after {
-          content: url('img/after-arrow.png');
-          position: relative;
-          top: 6px
-        }
-
-      }
-    }
-    @include desktop {
-      flex-wrap: wrap;
-      li {
-        min-width: 358px;
-        margin-bottom: 20px;
-      }
-    }
-  }
-}
-
-.bottom {
-  margin: 90px auto 0 auto;
-  text-align: center;
-  width: 100%;
-  max-width: 800px;
-  h2 {
-    @include font-medium(26px);
-    letter-spacing: 6.5px;
-    color: $yellow;
-    text-transform: uppercase;
-    margin: 0 20px 50px 20px;
-  }
-  p {
-    @include font-light(16px, 40px);
-    margin: 0 20px;
-  }
-  .bottom-logo {
-    height: 80px;
-    margin: 20px 0 0;
-  }
-}
-
-main {
-
-  margin: 0 10px;
-
-  section.brand {
-    margin: 0 auto;
-    background-position: center right;
-    background-repeat: no-repeat;
-    @include desktop {
-      background-image: none !important;
-      min-height: auto;
-      .brand-container {
-        width: auto;
-      }
-    }
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
-    .brand-container {
-      width: 50%;
-      h1 {
-        margin: 0;
+      &.one-up {
+        margin: 30px 0 0 0;
         padding: 0;
-        .brand-logo {
-          height: auto;
-          max-width: 100%;
-        }
-      }
-
-      .brand-tagline {
-        @include font-medium(26px);
-        color: $yellow;
-        letter-spacing: 2.7px;
-        text-transform: uppercase;
-      }
-      .brand-copy {
-        @include font-light(16px, 32px);
-        line-height: 38px;
-      }
-      .brand-link {
-        text-transform: uppercase;
-        color: $yellow;
-        position: relative;
-        letter-spacing: 3.5px;
-        @include font-medium(14px);
-        &:after {
-          content: url('img/after-arrow.png');
-          position: relative;
-          top: 6px
-        }
-      }
-      .brand-social {
-        padding: 0;
-        margin: 0;
         list-style: none;
         display: flex;
-        margin: 40px 0 0;
+        flex-direction: column;
+        justify-content: flex-start;
         li {
-          margin: 0 20px 0 0;
+          overflow: hidden;
+          position: relative;
+          pointer-events: none;
+          .one-up--background {
+            z-index: 0;
+          }
+          &:hover {
+            .hover {
+              opacity: 1;
+            }
+          }
+          &:first-child {
+            margin: 0 0 20px;
+          }
+          &:last-child {
+            margin-right: 0;
+          }
           a {
             color: inherit;
-            font-size: 0;
+            pointer-events: auto;
           }
-          &.facebook {
-            a:after {
-              content: url('img/social/facebook.png');
+          .hover {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            background-color: rgba(255, 255, 255, 0.2);
+            -webkit-transition: opacity 1s; /* Safari */
+            transition: opacity 1s;
+            opacity: 0;
+          }
+          .one-up--item-info {
+            position: absolute;
+            bottom: 15px;
+            color: $yellow;
+            text-transform: uppercase;
+            text-align: center;
+            width: 100%;
+            .one-up--item-brand-name {
+              font-size: 25px;
+              color: $off-white;
+              letter-spacing: 2.7px;
             }
           }
-          &.instagram {
-            a:after {
-              content: url('img/social/instagram.png');
+          .one-up--item-brand-meet {
+            font-size: 14px;
+            position: relative;
+            &:after {
+              content: url('img/after-arrow.png');
+              position: relative;
+              top: 6px
             }
+
+          }
+        }
+      }
+      &.three-up {
+        margin: 30px 0 0 0;
+        padding: 0;
+        list-style: none;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        li {
+          max-width: 425px;
+          min-width: 358px;
+          max-height: 370px;
+          background-repeat: no-repeat;
+          background-size: cover;
+          background-position: right bottom;
+          overflow: hidden;
+          margin: 0 7px;
+          position: relative;
+          pointer-events: none;
+          &:hover {
+            .hover {
+              opacity: 1;
+            }
+          }
+          &:first-child {
+            margin-left: 0;
+          }
+          &:last-child {
+            margin-right: 0;
+          }
+          a {
+            color: inherit;
+            pointer-events: auto;
+          }
+          .hover {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            background-color: rgba(255, 255, 255, 0.2);
+            -webkit-transition: opacity 1s; /* Safari */
+            transition: opacity 1s;
+            opacity: 0;
+          }
+          .three-up--item-info {
+            position: absolute;
+            bottom: 15px;
+            left: 30px;
+            color: $yellow;
+            text-transform: uppercase;
+            right: 50%;
+            .three-up--item-brand-name {
+              font-size: 25px;
+              color: $off-white;
+              letter-spacing: 2.7px;
+            }
+          }
+          .three-up--item-brand-meet {
+            font-size: 14px;
+            position: relative;
+            &:after {
+              content: url('img/after-arrow.png');
+              position: relative;
+              top: 6px
+            }
+
+          }
+        }
+        @include desktop {
+          flex-wrap: wrap;
+          li {
+            min-width: 358px;
+            margin-bottom: 20px;
           }
         }
       }
     }
-  }
-
-  .brand-gallery {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    &-title {
-      @include font-medium(26px);
-      letter-spacing: 2.7px;
-      text-transform: uppercase;
-    }
-  }
-
-  &#zb_customs {
-    section.brand {
-      width: 1024px;
-      min-height: 927px;
-      .brand-container {
-        .brand-logo {
-          width: 380px;
-        }
+    .bottom {
+      margin: 90px auto 0 auto;
+      text-align: center;
+      width: 100%;
+      max-width: 800px;
+      h2 {
+        @include font-medium(26px);
+        letter-spacing: 6.5px;
+        color: $yellow;
+        text-transform: uppercase;
+        margin: 0 20px 50px 20px;
+      }
+      p {
+        @include font-light(16px, 40px);
+        margin: 0 20px;
+      }
+      .bottom-logo {
+        height: 80px;
+        margin: 20px 0 0;
       }
     }
-    @include desktop() {
+
+    h1, h2{
+      margin: 0;
+      padding: 0;
+    }
+
+    main {
+
+      background-position: top right;
+      background-repeat: no-repeat;
+
+      margin: 0 10px;
+
       section.brand {
-        width: auto;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        border-bottom: 1px solid $off-white;
         .brand-container {
-          width: auto;
+          width: 50%;
+          margin: 0 0 60px;
+          h1 {
+            margin: 0 0 45px;
+            padding: 0;
+            .brand-logo {
+              height: auto;
+              max-width: 100%;
+            }
+            @include desktop{
+              text-align: center;
+            }
+          }
+          h2.brand-tagline {
+            @include font-medium(26px);
+            color: $yellow;
+            letter-spacing: 6.7px;
+            text-transform: uppercase;
+            @include desktop{
+              text-align: center;
+            }
+          }
+          .brand-copy {
+            @include font-light(16px, 32px);
+            line-height: 38px;
+          }
+          .brand-link {
+            text-transform: uppercase;
+            color: $yellow;
+            position: relative;
+            letter-spacing: 3.5px;
+            display: block;
+            margin: 0 0 12px;
+            @include font-medium(14px);
+            &:after {
+              content: url('img/after-arrow.png');
+              position: relative;
+              top: 6px
+            }
+          }
+          .brand-social {
+            list-style: none;
+            display: flex;
+            li {
+              margin: 0 20px 0 0;
+              a {
+                color: inherit;
+                font-size: 0;
+              }
+              &.facebook {
+                a:after {
+                  content: url('img/social/facebook.png');
+                }
+              }
+              &.instagram {
+                a:after {
+                  content: url('img/social/instagram.png');
+                }
+              }
+            }
+          }
         }
       }
+
+      section.brand-gallery {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        .brand-gallery-title {
+          @include font-grotesque_bold(30px);
+          text-transform: uppercase;
+          font-weight: 700;
+          color: $yellow;
+          margin: 50px 0;
+          letter-spacing: 8px;
+        }
+      }
+
+      &#zb_customs {
+        section.brand {
+          width: 1024px;
+          min-height: 927px;
+          .brand-container {
+            .brand-logo {
+              width: 380px;
+              margin: 0 auto;
+            }
+          }
+        }
+        @include desktop{
+          section.brand{
+            height: auto;
+            min-height: auto;
+          }
+        }
+      }
+
+      &#demerbox {
+        section.brand {
+          padding: 135px 0 0 0;
+          width: 1000px;
+          margin: 0 auto;
+          background-position: center right;
+          .brand-container {
+            h1 {
+              margin: 0 0 20px 0;
+              padding: 0;
+            }
+            .brand-logo {
+              width: 420px;
+              height: auto;
+              margin: 0 0 20px;
+            }
+          }
+        }
+
+      }
+
+      &#sheehan_and_co {
+        section.brand {
+          padding: 100px 0 0 0;
+          width: 1010px;
+          .brand-container {
+            h1 {
+              .brand-logo {
+                width: 395px;
+                height: auto;
+                margin: 0 0 25px 0;
+              }
+            }
+          }
+        }
+      }
+
+      &#woodward_brown {
+        section.brand {
+          width: 1000px;
+          padding: 70px 0 0;
+          .brand-container {
+            h1 {
+              .brand-logo {
+                width: 390px;
+              }
+            }
+          }
+        }
+      }
+
+      &#southern_grind{
+        section.brand{
+          width: 1000px;
+          padding: 55px 0 0 0;
+          .brand-container{
+            h1{
+              .brand-logo{
+                width: 346px;
+              }
+            }
+          }
+        }
+      }
+
+      @include desktop{
+        background-image: none !important;
+        section.brand{
+          padding: 60px 0 0 0 !important;
+          width: auto !important;
+          min-height: auto;
+          .brand-container {
+            width: auto;
+            h1{
+              margin: 0 0 20px 0;
+              padding: 0;
+            }
+          }
+        }
+      }
+
+    }
+
+    .sub-page.copy-page{
+      section{
+        padding: 70px 0 0;
+        margin: 0 auto;
+        width: 100%;
+        max-width: 1000px;
+        h1{
+          text-align: center;
+          color: $yellow;
+          text-transform: uppercase;
+          @include font-medium(26px, 52px);
+          letter-spacing: 6.7px;
+        }
+        .page-copy{
+          @include font-light(16px, 32px);
+        }
+      }
+
     }
   }
-
-  &#demerbox {
-    section.brand {
-      padding: 135px 0 0 0;
-      width: 1000px;
-      margin: 0 auto;
-      background-position: center right;
-      .brand-container {
-        h1 {
-          margin-top: 20px;
-          margin: 0 0 20px 0;
-          padding: 0;
-        }
-        .brand-logo {
-          width: 420px;
-          height: auto;
-          margin: 0 0 20px;
-        }
-      }
-    }
-
-    @include desktop {
-      section.brand {
-        width: auto;
-        .brand-container {
-          width: auto;
-        }
-      }
-    }
-
-  }
-
 }
 
