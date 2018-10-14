@@ -61,6 +61,7 @@ nav {
   @include tablet{
     height: auto;
     position: relative;
+    bottom: 40px;
     display: none;
     &.open{
       display:inherit;

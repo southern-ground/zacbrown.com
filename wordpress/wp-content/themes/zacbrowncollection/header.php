@@ -24,8 +24,6 @@
       });
     </script>
 
-    <script src="<?= get_template_directory_uri() ?>/js/scripts.js"></script>
-
 </head>
 <body <?php body_class(); ?>>
 
@@ -55,10 +53,12 @@
         </div>
         <!-- /logo -->
 
-        <div class="nav-toggle open">
+        <div id="mobile-nav-toggle" class="nav-toggle open">
             <a href="#" id="nav-toggle" class="closed">
-                <img class="hamburger"
+                <img class="nav-open"
                      src="<?= get_template_directory_uri() ?>/img/hamburger.svg"/>
+                <img class="nav-close"
+                     src="<?= get_template_directory_uri() ?>/img/hamburger-close.svg"/>
             </a>
         </div>
 

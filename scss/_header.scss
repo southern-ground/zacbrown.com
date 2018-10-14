@@ -10,13 +10,30 @@ html {
 
       div.nav-toggle{
         display:none;
-        border-top: 1px solid $yellow;
-        border-bottom: 1px solid $yellow;
         position: relative;
         justify-content: flex-end;
+        z-index:2;
+        pointer-events: none;
+        &:not(.open){
+          a#nav-toggle{
+            img.nav-open{
+              display: none;
+            }
+          }
+        }
+        &.open{
+          border-top: 1px solid $yellow;
+          border-bottom: 1px solid $yellow;
+          a#nav-toggle{
+            img.nav-close{
+              display: none;
+            }
+          }
+        }
         a#nav-toggle{
           padding: 5px;
-          img.hamburger{
+          pointer-events: all;
+          img.nav-open, img.nav-close{
             width: 30px;
             height: 30px;
           }
@@ -47,7 +64,9 @@ html {
         div.nav-toggle{
           display: flex;
           &:not(.open){
-            display: none;
+            &:parent{
+              background: magenta;
+            }
           }
         }
         .logo {

@@ -16,8 +16,8 @@
     });
 
     $('#nav-toggle').click(function(e){
-      $('header nav').addClass('open');
-      $('header div.nav-toggle').removeClass('open');
+      $('#mobile-nav-toggle').toggleClass('open');
+      $('nav').toggle();
       return false;
     });
 
