@@ -72,9 +72,26 @@ get_header(); ?>
 
         <?php
 
-        $brandGallery = get_field('gallery_images');
+        $images = get_field('gallery_images');
 
-        ?>
+        if( $images ): ?>
+        <div class="flexslider">
+
+
+            <ul class="slides">
+                <?php foreach( $images as $image ): ?>
+                    <li>
+                        <a href="<?php echo $image['url']; ?>" target="_blank">
+                            <img src="<?= $image['url'] ?>"
+                                 alt="<?php echo $image['alt']; ?>"
+                                 caption="<?php echo $image['alt']; ?>" />
+                        </a>
+                    </li>
+                <?php endforeach; ?>
+            </ul>
+
+        </div>
+        <?php endif; ?>
 
     </section>
 

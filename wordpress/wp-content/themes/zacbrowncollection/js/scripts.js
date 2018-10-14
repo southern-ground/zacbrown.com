@@ -21,6 +21,17 @@
       return false;
     });
 
+    $('.flexslider').flexslider({
+      animation: 'slide',
+      slideshow: true,
+      startAt: 0,
+      initDelay: 5000,
+      directionNav: true,
+      controlNav: false,
+      prevText: '',
+      nextText: ''
+    });
+
 	});
 	
 })(jQuery, this);
