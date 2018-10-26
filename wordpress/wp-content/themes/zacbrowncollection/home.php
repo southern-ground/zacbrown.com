@@ -88,7 +88,7 @@ get_header(); ?>
 
     ?>
 
-    <section>
+    <section id="our-philosophy">
         <div class="bottom">
             <h2><?= the_field('title') ?></h2>
             <?= the_Field('copy') ?>

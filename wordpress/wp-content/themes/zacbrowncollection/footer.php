@@ -15,7 +15,7 @@
                             <a href="/privacy-policy">Privacy Policy</a>
                         </li>
                         <li>
-                            <a href="/contact-us">Contact Us</a>
+                            <a href="mailto:info@zacbrown.com">Contact Us</a>
                         </li>
                     </ul>
 				</div>
