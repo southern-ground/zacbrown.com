@@ -1,4 +1,7 @@
 /* NAV */
+#mobile-nav-toggle{
+  width: 100%;
+}
 nav {
   position: absolute;
   bottom: 0;
@@ -12,7 +15,8 @@ nav {
   display: flex;
   justify-content: space-around;
   align-content: center;
-
+  z-index:999;
+  background: $black;
   ul {
     list-style: none;
     display: flex;
@@ -23,7 +27,6 @@ nav {
     padding: 0;
     flex-grow: 1;
     li {
-
       a {
         @include font-medium(12px, 40px);
         text-decoration: none;
@@ -60,7 +63,6 @@ nav {
 
   @include tablet{
     height: auto;
-    position: relative;
     bottom: 40px;
     display: none;
     &.open{

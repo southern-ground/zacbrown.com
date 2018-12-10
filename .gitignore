@@ -9,3 +9,5 @@ wordfence-waf.php
 wordpress/wp-content/wflogs
 wordpress/.htaccess
 wordpress/stage
+wordpress/wp-content/uploads
+wordpress/wp-content/updraft

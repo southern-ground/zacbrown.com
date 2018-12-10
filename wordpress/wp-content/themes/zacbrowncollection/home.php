@@ -3,6 +3,67 @@ get_header(); ?>
 
 <main role="main">
     <!-- section -->
+
+    <section class="content-slider">
+
+        <div id="slider">
+            <ul class="slides">
+                <?php
+                $index = 0;
+                // Check that there slides:
+                while (have_rows('slides')) : the_row();
+                    $image = get_sub_field('slide_background_image');
+                    $target = get_sub_field('opens_in_new_window') ? "target='_blank'" : "";
+                    ?>
+                    <li class="slide" data-index="<?=$index?>">
+                        <img class="background" src="<?=get_sub_field('slide_background_image')?>" />
+                        <div class="copy">
+                            <h2><?=get_sub_field('slide_headline')?></h2>
+                            <p class="slide-copy"><?=get_sub_field('slide_copy')?></p>
+                            <p class="slide-cta">
+                                <a class="slide-link" href="<?=get_sub_field('slide_cta_url')?>" <?=$target?>>
+                                    <?=get_sub_field('slide_cta_text')?>
+                                </a>
+                            </p>
+                        </div>
+                    </li>
+                <?php
+                $index++;
+                endwhile;
+                ?>
+            </uL>
+        </div>
+
+        <div class="slider-pips">
+            <?php
+
+            $index = 0;
+
+            while (have_rows('slides')) : the_row();
+
+            ?>
+                <a data-index="<?=$index?>" class="slider-pip" href="#"></a>
+            <?php
+            $index++;
+            endwhile;
+            ?>
+        </div>
+        <!--
+        <a href="#" class="control control--next">></a>
+        <a href="#" class="control control--prev"><</a>
+        -->
+    </section>
+
+    <section id="our-philosophy">
+        <div class="bottom">
+            <h2><?= the_field('title') ?></h2>
+            <?= the_Field('copy') ?>
+            <a href="#" class="scroll-to-top">
+                <img class="bottom-logo" src="<?= get_template_directory_uri() ?>/img/logo.svg"/>
+            </a>
+        </div>
+    </section>
+
     <?php
     // Check that there are 3-ups:
     if (have_rows('home_page_3-up')):
@@ -88,15 +149,6 @@ get_header(); ?>
 
     ?>
 
-    <section id="our-philosophy">
-        <div class="bottom">
-            <h2><?= the_field('title') ?></h2>
-            <?= the_Field('copy') ?>
-            <a href="#" class="scroll-to-top">
-                <img class="bottom-logo" src="<?= get_template_directory_uri() ?>/img/logo.svg"/>
-            </a>
-        </div>
-    </section>
 </main>
 
 <?php get_footer(); ?>

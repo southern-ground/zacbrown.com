@@ -67,9 +67,6 @@
         <nav class="nav" role="navigation">
             <ul>
                 <?php html5blank_nav(); ?>
-                <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-25">
-                    <a href="/#our-philosophy">Our Philosophy</a>
-                </li>
             </ul>
         </nav>
         <!-- /nav -->
