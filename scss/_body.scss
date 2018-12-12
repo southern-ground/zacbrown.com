@@ -281,7 +281,7 @@ html {
                 text-transform: uppercase;
                 letter-spacing: 8.5px;
               }
-              p.slide-copy{
+              .sub-copy > p{
                 font-size: 19px;
                 text-transform: uppercase;
                 letter-spacing: 6px;
@@ -291,11 +291,12 @@ html {
               }
               p.slide-cta{
                 a.slide-link{
-                  display: inline-block;
                   border: 1px solid $link-gray;
-                  margin: 0 0 42px;
-                  padding: 12px 30px 10px;
                   color: $link-gray;
+                  display: inline-block;
+                  font-size: 12px;
+                  margin: 0 0 26px;
+                  padding: 10px 86px 8px;
                   text-transform: uppercase;
                   &:hover{
                     background-color: $link-gray;
@@ -313,13 +314,14 @@ html {
                 font-size:2.8vw;
                 line-height: 2.8vw;
               }
-              p.slide-copy{
+              .sub-copy > p{
                 font-size: 1.4vw;
                 margin: 0 auto 1.49vw;
+                letter-spacing: 0.4vw;
               }
               p.slide-cta {
                 a.slide-link {
-                  font-size: 1.4vw;
+                  font-size: 0.89vw;
                   padding: .89vw 2.24vw 0.74vw;
                   margin: 0 0 3.13vw;
                 }
@@ -331,13 +333,27 @@ html {
 
           @media (max-width:640px){
             ul.slides li{
-              p.slide-copy{
+              h2{
+                margin: 0 0 10px;
+              }
+              .sub-copy{
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+                margin: 0 0 10px;
+              }
+              .sub-copy > p{
                 font-size: 10px;
+                margin: 0 0 10px;
+                flex-grow:1;
               }
               p.slide-cta {
                 a.slide-link {
                   font-size: 10px;
                   padding: 10px;
+                  white-space: nowrap;
+                  margin: 0 0 0 10px;
                 }
               }
             }

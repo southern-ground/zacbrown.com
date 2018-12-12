@@ -19,12 +19,16 @@ get_header(); ?>
                         <img class="background" src="<?=get_sub_field('slide_background_image')?>" />
                         <div class="copy">
                             <h2><?=get_sub_field('slide_headline')?></h2>
-                            <p class="slide-copy"><?=get_sub_field('slide_copy')?></p>
-                            <p class="slide-cta">
-                                <a class="slide-link" href="<?=get_sub_field('slide_cta_url')?>" <?=$target?>>
-                                    <?=get_sub_field('slide_cta_text')?>
-                                </a>
-                            </p>
+                            <div>
+                                <div class="sub-copy">
+                                    <?=get_sub_field('slide_copy')?>
+                                    <p class="slide-cta">
+                                        <a class="slide-link" href="<?=get_sub_field('slide_cta_url')?>" <?=$target?>>
+                                            <?=get_sub_field('slide_cta_text')?>
+                                        </a>
+                                    </p>
+                                </div>
+                            </div>
                         </div>
                     </li>
                 <?php
