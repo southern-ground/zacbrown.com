@@ -71,13 +71,14 @@ get_header(); ?>
     <?php
     // Check that there are 3-ups:
     if (have_rows('home_page_3-up')):
+        $index = 0;
         ?>
         <section>
             <ul class="three-up">
                 <?php
 
                 // loop through the rows of data
-                while (have_rows('home_page_3-up')) : the_row();
+                while (have_rows('home_page_3-up') && $index < 2) : the_row();
 
                     $image = get_sub_field('brand_image');
 
@@ -101,6 +102,8 @@ get_header(); ?>
                     </li>
 
                 <?php
+
+                ++$index;
 
                 endwhile;
 
