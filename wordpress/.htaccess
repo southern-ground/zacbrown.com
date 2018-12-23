@@ -12,9 +12,6 @@ RewriteRule . /index.php [L]
 # END WordPress
 
 # Wordfence WAF
-<IfModule mod_php7.c>
-	php_value auto_prepend_file '/Users/ferristhomas/Sites/zacbrowncollective.com/wordpress/wordfence-waf.php'
-</IfModule>
 <Files ".user.ini">
 <IfModule mod_authz_core.c>
 	Require all denied

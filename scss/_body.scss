@@ -12,15 +12,17 @@ html {
     /* wrapper */
     .wrapper {
       width: 100%;
-      max-width: 1310px;
+      max-width: 1470px;
       margin: 0 auto;
       padding: 0 10px;
       position: relative;
     }
+
     ul {
       padding: 0;
       margin: 0;
       list-style: none;
+
       &.one-up {
         margin: 30px 0 0 0;
         padding: 0;
@@ -28,28 +30,35 @@ html {
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
+
         li {
           overflow: hidden;
           position: relative;
           pointer-events: none;
+
           .one-up--background {
             z-index: 0;
           }
+
           &:hover {
             .hover {
               opacity: 1;
             }
           }
+
           &:first-child {
             margin: 0 0 20px;
           }
+
           &:last-child {
             margin-right: 0;
           }
+
           a {
             color: inherit;
             pointer-events: auto;
           }
+
           .hover {
             position: absolute;
             top: 0;
@@ -61,6 +70,7 @@ html {
             transition: opacity 1s;
             opacity: 0;
           }
+
           .one-up--item-info {
             position: absolute;
             bottom: 15px;
@@ -68,15 +78,18 @@ html {
             text-transform: uppercase;
             text-align: center;
             width: 100%;
+
             .one-up--item-brand-name {
               font-size: 25px;
               color: $off-white;
               letter-spacing: 2.7px;
             }
           }
+
           .one-up--item-brand-meet {
             font-size: 14px;
             position: relative;
+
             &:after {
               content: url('img/after-arrow.png');
               position: relative;
@@ -86,6 +99,7 @@ html {
           }
         }
       }
+
       &.three-up {
         margin: 30px 0 0 0;
         padding: 0;
@@ -93,6 +107,7 @@ html {
         display: flex;
         flex-direction: row;
         justify-content: space-evenly;
+
         li {
           max-width: 425px;
           min-width: 358px;
@@ -104,21 +119,26 @@ html {
           margin: 0 7px;
           position: relative;
           pointer-events: none;
+
           &:hover {
             .hover {
               opacity: 1;
             }
           }
+
           &:first-child {
             margin-left: 0;
           }
+
           &:last-child {
             margin-right: 0;
           }
+
           a {
             color: inherit;
             pointer-events: auto;
           }
+
           .hover {
             position: absolute;
             top: 0;
@@ -130,6 +150,7 @@ html {
             transition: opacity 1s;
             opacity: 0;
           }
+
           .three-up--item-info {
             position: absolute;
             bottom: 15px;
@@ -137,15 +158,18 @@ html {
             color: $yellow;
             text-transform: uppercase;
             right: 50%;
+
             .three-up--item-brand-name {
               font-size: 25px;
               color: $off-white;
               letter-spacing: 2.7px;
             }
           }
+
           .three-up--item-brand-meet {
             font-size: 14px;
             position: relative;
+
             &:after {
               content: url('img/after-arrow.png');
               position: relative;
@@ -154,6 +178,7 @@ html {
 
           }
         }
+
         @include desktop {
           flex-wrap: wrap;
           li {
@@ -163,11 +188,13 @@ html {
         }
       }
     }
+
     .bottom {
       margin: 0 auto;
       text-align: center;
       width: 100%;
       max-width: 800px;
+
       h2 {
         @include font-medium(26px);
         letter-spacing: 6.5px;
@@ -175,25 +202,27 @@ html {
         text-transform: uppercase;
         margin: 0 20px 50px 20px;
       }
+
       p {
         @include font-light(16px, 40px);
         margin: 0 20px;
       }
+
       .bottom-logo {
         height: 80px;
         margin: 20px 0 0;
       }
     }
 
-    h1, h2{
+    h1, h2, h3 {
       margin: 0;
       padding: 0;
     }
 
     main {
 
-      .flex-active-slide{
-        a{
+      .flex-active-slide {
+        a {
           pointer-events: none;
         }
       }
@@ -203,15 +232,17 @@ html {
 
       margin: 0 10px;
 
-      section.content-slider{
+      section.content-slider {
         margin: 0 0 20px;
-        div#slider{
+
+        div#slider {
           position: relative;
           overflow: hidden;
           margin: 20px auto 20px auto;
           border-radius: 4px;
           max-height: 490px;
-          .control{
+
+          .control {
             opacity: 0;
             position: absolute;
             display: inline-block;
@@ -228,25 +259,31 @@ html {
             -ms-transition: opacity 0.5s ease-in;
             -o-transition: opacity 0.5s ease-in;
             transition: opacity 0.5s ease-in;
-            &--prev{
+
+            &--prev {
               left: 0;
             }
-            &--next{
+
+            &--next {
               right: 0;
             }
+
             top: calc(50% - 20px);
           }
-          &:hover{
-            .control{
+
+          &:hover {
+            .control {
               opacity: 0.6;
             }
           }
-          ul.slides{
+
+          ul.slides {
             position: relative;
             margin: 0;
             padding: 0;
             list-style: none;
-            li{
+
+            li {
               position: relative;
               display: block;
               float: left;
@@ -259,7 +296,8 @@ html {
               justify-content: flex-end;
               height: 490px;
               width: 1270px;
-              .background{
+
+              .background {
                 z-index: 0;
                 height: auto;
                 width: 100%;
@@ -267,21 +305,25 @@ html {
                 top: 0;
                 left: 0;
               }
-              .copy{
+
+              .copy {
                 z-index: 2;
                 padding: 0 20px;
-                p{
+
+                p {
                   margin: 0;
                   padding: 0;
                 }
               }
-              h2{
+
+              h2 {
                 font-size: 38px;
                 font-weight: normal;
                 text-transform: uppercase;
                 letter-spacing: 8.5px;
               }
-              .sub-copy > p{
+
+              .sub-copy > p {
                 font-size: 19px;
                 text-transform: uppercase;
                 letter-spacing: 6px;
@@ -289,8 +331,9 @@ html {
                 margin: 0 auto 20px;
                 color: $yellow;
               }
-              p.slide-cta{
-                a.slide-link{
+
+              p.slide-cta {
+                a.slide-link {
                   border: 1px solid $link-gray;
                   color: $link-gray;
                   display: inline-block;
@@ -298,7 +341,8 @@ html {
                   margin: 0 0 26px;
                   padding: 10px 86px 8px;
                   text-transform: uppercase;
-                  &:hover{
+
+                  &:hover {
                     background-color: $link-gray;
                     color: black;
                   }
@@ -307,18 +351,20 @@ html {
             }
           }
 
-          @media (max-width: 1340px){
+          @media (max-width: 1340px) {
 
-            ul.slides li{
-              h2{
-                font-size:2.8vw;
+            ul.slides li {
+              h2 {
+                font-size: 2.8vw;
                 line-height: 2.8vw;
               }
-              .sub-copy > p{
+
+              .sub-copy > p {
                 font-size: 1.4vw;
                 margin: 0 auto 1.49vw;
                 letter-spacing: 0.4vw;
               }
+
               p.slide-cta {
                 a.slide-link {
                   font-size: 0.89vw;
@@ -326,28 +372,32 @@ html {
                   margin: 0 0 3.13vw;
                 }
               }
+
               width: calc(100vw - 40px);
-              height: calc((100vw - 40px) * (490/1270));
+              height: calc((100vw - 40px) * (490 / 1270));
             }
           }
 
-          @media (max-width:640px){
-            ul.slides li{
-              h2{
+          @media (max-width: 640px) {
+            ul.slides li {
+              h2 {
                 margin: 0 0 10px;
               }
-              .sub-copy{
+
+              .sub-copy {
                 display: flex;
                 flex-direction: row;
                 justify-content: space-between;
                 align-items: center;
                 margin: 0 0 10px;
               }
-              .sub-copy > p{
+
+              .sub-copy > p {
                 font-size: 10px;
                 margin: 0 0 10px;
-                flex-grow:1;
+                flex-grow: 1;
               }
+
               p.slide-cta {
                 a.slide-link {
                   font-size: 10px;
@@ -360,17 +410,20 @@ html {
           }
 
         }
-        div.slider-pips{
+
+        div.slider-pips {
           display: flex;
           justify-content: center;
           align-items: center;
-          .slider-pip{
-            width:10px;
+
+          .slider-pip {
+            width: 10px;
             height: 10px;
             border-radius: 50%;
             border: 1px solid $yellow;
             margin: 0 10px;
-            &.active{
+
+            &.active {
               background-color: $yellow;
             }
           }
@@ -384,33 +437,40 @@ html {
         align-items: flex-start;
         justify-content: center;
         border-bottom: 1px solid $off-white;
+
         .brand-container {
           width: 50%;
           margin: 0 0 60px;
+
           h1 {
             margin: 0 0 45px;
             padding: 0;
+
             .brand-logo {
               height: auto;
               max-width: 100%;
             }
-            @include desktop{
+
+            @include desktop {
               text-align: center;
             }
           }
+
           h2.brand-tagline {
             @include font-medium(26px);
             color: $yellow;
             letter-spacing: 6.7px;
             text-transform: uppercase;
-            @include desktop{
+            @include desktop {
               text-align: center;
             }
           }
+
           .brand-copy {
             @include font-light(16px, 32px);
             line-height: 38px;
           }
+
           .brand-link {
             text-transform: uppercase;
             color: $yellow;
@@ -419,26 +479,32 @@ html {
             display: block;
             margin: 0 0 12px;
             @include font-medium(14px);
+
             &:after {
               content: url('img/after-arrow.png');
               position: relative;
               top: 6px
             }
           }
+
           .brand-social {
             list-style: none;
             display: flex;
+
             li {
               margin: 0 20px 0 0;
+
               a {
                 color: inherit;
                 font-size: 0;
               }
+
               &.facebook {
                 a:after {
                   content: url('img/social/facebook.png');
                 }
               }
+
               &.instagram {
                 a:after {
                   content: url('img/social/instagram.png');
@@ -455,6 +521,7 @@ html {
         justify-content: center;
         align-items: center;
         width: 100%;
+
         .brand-gallery-title {
           @include font-bold(30px);
           text-transform: uppercase;
@@ -462,12 +529,15 @@ html {
           color: $yellow;
           margin: 50px 0;
           letter-spacing: 8px;
+          text-align: center;
         }
-        .flexslider{
+
+        .flexslider {
           position: relative;
           width: 1000px;
           margin: 0 auto;
-          ul.flex-direction-nav{
+
+          ul.flex-direction-nav {
             position: absolute;
             top: 50%;
             display: flex;
@@ -475,17 +545,19 @@ html {
             width: 1100px;
             left: -50px;
 
-            li a{
+            li a {
               display: inline-block;
               width: 40px;
               height: 40px;
               background-image: url('img/arrow.svg');
               background-repeat: no-repeat;
             }
-            .flex-nav-prev a{
+
+            .flex-nav-prev a {
 
             }
-            .flex-nav-next a{
+
+            .flex-nav-next a {
               -moz-transform: scaleX(-1);
               -o-transform: scaleX(-1);
               -webkit-transform: scaleX(-1);
@@ -494,9 +566,10 @@ html {
               -ms-filter: "FlipH";
             }
           }
-          @include desktop{
+
+          @include desktop {
             width: 100%;
-            ul.flex-direction-nav{
+            ul.flex-direction-nav {
               width: calc(100% - 20px);
               left: 10px;
             }
@@ -509,6 +582,7 @@ html {
         section.brand {
           width: 1024px;
           min-height: 927px;
+
           .brand-container {
             .brand-logo {
               width: 380px;
@@ -516,8 +590,9 @@ html {
             }
           }
         }
-        @include desktop{
-          section.brand{
+
+        @include desktop {
+          section.brand {
             height: auto;
             min-height: auto;
           }
@@ -530,11 +605,13 @@ html {
           width: 1000px;
           margin: 0 auto;
           background-position: center right;
+
           .brand-container {
             h1 {
               margin: 0 0 20px 0;
               padding: 0;
             }
+
             .brand-logo {
               width: 420px;
               height: auto;
@@ -542,13 +619,13 @@ html {
             }
           }
         }
-
       }
 
       &#sheehan_and_co {
         section.brand {
           padding: 100px 0 0 0;
           width: 1010px;
+
           .brand-container {
             h1 {
               .brand-logo {
@@ -565,6 +642,7 @@ html {
         section.brand {
           width: 1000px;
           padding: 70px 0 0;
+
           .brand-container {
             h1 {
               .brand-logo {
@@ -575,13 +653,14 @@ html {
         }
       }
 
-      &#southern_grind{
-        section.brand{
+      &#southern_grind {
+        section.brand {
           width: 1000px;
           padding: 55px 0 0 0;
-          .brand-container{
-            h1{
-              .brand-logo{
+
+          .brand-container {
+            h1 {
+              .brand-logo {
                 width: 346px;
               }
             }
@@ -589,15 +668,95 @@ html {
         }
       }
 
-      @include desktop{
-        background-image: none !important;
+      &#music {
+        margin: 74px 165px 0 165px;
+
+        .brand-tagline {
+          color: $off-white;
+          font-size: 60px;
+          font-weight: bold;
+          letter-spacing: 15px;
+        }
+
+        h2:not(.brand-tagline) {
+          @include font-medium(26px);
+          color: $yellow;
+          letter-spacing: 6.7px;
+          text-transform: uppercase;
+          @include desktop {
+            text-align: center;
+          }
+        }
+
+        .brand-container {
+
+        }
+      }
+
+      &#social_club {
+        background-position: 780px 40px;
+        .brand-logo {
+          max-width: 400px;
+          height: auto;
+        }
+
+        section.brand {
+          width: 1000px;
+          padding: 55px 0 0 0;
+        }
+
+        @media (max-width: 1300px) {
+          background-position: right 40px;
+        }
+      }
+
+      &#remedy_bakeshop {
+        background-position-y: 80px;
+        background-position-x: calc(left - 20px);
+        @media (min-width: 1320px) {
+          background-position: 808px 80px;
+        }
+
+        section.brand {
+          width: 1110px;
+          padding: 70px 0 0 0;
+        }
+      }
+
+      &#southern_reel{
         section.brand{
+          width: 1000px;
+          padding: 70px 0 0 0;
+        }
+        .brand-logo{
+          max-width: 400px;
+          height: auto;
+        }
+      }
+
+      &#z_alexander_brown{
+        background-position-y: 70px;
+        section.brand{
+          width: 1000px;
+          padding: 70px 0 0 0;
+        }
+        .brand-logo{
+          max-width: 440px;
+          height: auto;
+        }
+      }
+
+      @include desktop {
+        background-image: none !important;
+        section.brand {
           padding: 60px 0 0 0 !important;
           width: auto !important;
           min-height: auto;
+
           .brand-container {
             width: auto;
-            h1{
+
+            h1 {
               margin: 0 0 20px 0;
               padding: 0;
             }
@@ -607,20 +766,22 @@ html {
 
     }
 
-    .sub-page.copy-page{
-      section{
+    .sub-page.copy-page {
+      section {
         padding: 70px 0 0;
         margin: 0 auto;
         width: 100%;
         max-width: 1000px;
-        h1{
+
+        h1 {
           text-align: center;
           color: $yellow;
           text-transform: uppercase;
           @include font-medium(26px, 52px);
           letter-spacing: 6.7px;
         }
-        .page-copy{
+
+        .page-copy {
           @include font-light(16px, 32px);
         }
       }

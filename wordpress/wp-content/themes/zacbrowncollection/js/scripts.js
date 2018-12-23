@@ -16,8 +16,10 @@
     });
 
     $('#nav-toggle').click(function(e){
+      $(this).toggleClass('closed');
       $('#mobile-nav-toggle').toggleClass('open');
       $('nav').toggle();
+      $('div.logo').toggleClass('nav-open');
       return false;
     });
 

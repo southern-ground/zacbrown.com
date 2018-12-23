@@ -5,6 +5,8 @@
 					 &copy; 2018 Zac Brown collective. All Rights Reserved.
 				</div>
 
+                <img class="zbc-logo" src="<?=get_template_directory_uri()?>/img/zbc-logo.svg" />
+
 				<!-- Right Side -->
 				<div class="links-container">
                     <ul class="footer-links">

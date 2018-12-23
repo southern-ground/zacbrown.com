@@ -10,13 +10,13 @@ get_header(); ?>
 
     <section class="brand">
 
-        <?php if (get_field('logo')): ?>
-
             <div class="brand-container">
+                <?php if (get_field('logo')): ?>
                 <h1>
                     <img class="brand-logo"
                          src="<?= get_template_directory_uri() ?>/img/brands/<?= get_field('custom_identifier') ?>/<?= get_field('logo') ?>"/>
                 </h1>
+                <?php endif; ?>
                 <h2 class="brand-tagline">
                     <?= get_field('tagline') ?>
                 </h2>
@@ -24,10 +24,14 @@ get_header(); ?>
                     <?= get_field('copy') ?>
                 </div>
 
+                <?php if(get_field('out-going_link')): ?>
+
                 <a class="brand-link"
                    href="<?= get_field('out-going_link')['url'] ?>">
                     <?= get_field('out-going_link')['title'] ?>
                 </a>
+
+                <?php endif; ?>
 
                 <ul class="brand-social">
                     <?php
@@ -61,8 +65,6 @@ get_header(); ?>
                 </ul>
 
             </div>
-
-        <?php endif; ?>
 
     </section>
 

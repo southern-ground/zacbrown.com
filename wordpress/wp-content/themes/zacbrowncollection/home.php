@@ -78,7 +78,7 @@ get_header(); ?>
                 <?php
 
                 // loop through the rows of data
-                while (have_rows('home_page_3-up') && $index < 2) : the_row();
+                while (have_rows('home_page_3-up')) : the_row();
 
                     $image = get_sub_field('brand_image');
 
