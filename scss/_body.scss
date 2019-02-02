@@ -437,7 +437,13 @@ html {
         align-items: flex-start;
         justify-content: center;
         border-bottom: 1px solid $off-white;
-
+        // Defaults often over-written:
+        width: 1000px;
+        padding: 70px 0 0 0;
+        .brand-logo{
+          max-width: 500px;
+          height: auto;
+        }
         .brand-container {
           width: 50%;
           margin: 0 0 60px;
@@ -736,6 +742,17 @@ html {
 
       &#z_alexander_brown{
         background-position-y: 70px;
+        section.brand{
+          width: 1000px;
+          padding: 70px 0 0 0;
+        }
+        .brand-logo{
+          max-width: 440px;
+          height: auto;
+        }
+      }
+
+      &#pottery32{
         section.brand{
           width: 1000px;
           padding: 70px 0 0 0;

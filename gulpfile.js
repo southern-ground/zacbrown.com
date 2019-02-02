@@ -4,7 +4,7 @@ var dir = "../wordpress",
     yargs = require('yargs'),
     sourcemaps = require('gulp-sourcemaps'),
     src = './scss/**',
-    dest = './wordpress/wp-content/themes/zacbrowncollection/';
+    dest = './wordpress/wp-content/themes/zbc/';
 
 gulp.task('sass', function() {
 	var prod = yargs.argv.prod || false;
