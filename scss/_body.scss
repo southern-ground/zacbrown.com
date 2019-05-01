@@ -1,4 +1,15 @@
 /* BODY */
+
+%link {
+  color: $yellow;
+}
+
+%default-unordered-list {
+  list-style-type: inherit;
+  padding: 0 0 0 40px;
+  margin: 0 0 20px;
+}
+
 html, body {
   padding: 0;
   margin: 0;
@@ -8,7 +19,33 @@ html, body {
 }
 
 html {
+
   body {
+
+    &.privacy-policy {
+      section {
+        a {
+          @extend %link;
+        }
+
+        ul {
+          @extend %default-unordered-list;
+        }
+      }
+    }
+
+    &.terms-of-use {
+      section {
+        a {
+          @extend %link;
+        }
+
+        ul {
+          @extend %default-unordered-list;
+        }
+      }
+    }
+
     /* wrapper */
     .wrapper {
       width: 100%;
@@ -187,6 +224,7 @@ html {
           }
         }
       }
+
     }
 
     .bottom {
@@ -440,10 +478,12 @@ html {
         // Defaults often over-written:
         width: 1000px;
         padding: 70px 0 0 0;
-        .brand-logo{
+
+        .brand-logo {
           max-width: 500px;
           height: auto;
         }
+
         .brand-container {
           width: 50%;
           margin: 0 0 60px;
@@ -701,6 +741,7 @@ html {
 
       &#social_club {
         background-position: 780px 40px;
+
         .brand-logo {
           max-width: 400px;
           height: auto;
@@ -729,39 +770,44 @@ html {
         }
       }
 
-      &#southern_reel{
-        section.brand{
+      &#southern_reel {
+        section.brand {
           width: 1000px;
           padding: 70px 0 0 0;
         }
-        .brand-logo{
+
+        .brand-logo {
           max-width: 400px;
           height: auto;
         }
       }
 
-      &#z_alexander_brown{
+      &#z_alexander_brown {
         background-position-y: 70px;
-        section.brand{
+
+        section.brand {
           width: 1000px;
           padding: 70px 0 0 0;
         }
-        .brand-logo{
+
+        .brand-logo {
           max-width: 440px;
           height: auto;
         }
       }
 
-      &#pottery32{
-        section.brand{
+      &#pottery32 {
+        section.brand {
           width: 1000px;
           padding: 70px 0 0 0;
         }
-        .brand-logo{
+
+        .brand-logo {
           max-width: 440px;
           height: auto;
         }
       }
+
 
       @include desktop {
         background-image: none !important;
