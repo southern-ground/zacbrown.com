@@ -27,7 +27,8 @@ get_header(); ?>
                 <?php if(get_field('out-going_link')): ?>
 
                 <a class="brand-link"
-                   href="<?= get_field('out-going_link')['url'] ?>">
+                   href="<?= get_field('out-going_link')['url'] ?>"
+                   target="<?= get_field('out-going_link')['target'] ?>">
                     <?= get_field('out-going_link')['title'] ?>
                 </a>
 
