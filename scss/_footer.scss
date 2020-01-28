@@ -1,34 +1,47 @@
 /* FOOTER */
-footer {
+footer.footer {
   margin: 60px auto 0 auto;
   padding: 20px 0 0 0;
   min-height: 70px;
   border-top: 1px solid $yellow;
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
   text-transform: uppercase;
   color: $yellow;
   letter-spacing: 2.7px;
-  .zbc-logo{
-    width: 80px;
-    height: auto;
-    margin: 0 0 20px;
+  .footnote {
+    padding: 0 15%;
+    font-size: 0.8rem;
+    margin: 0 auto 20px;
   }
-  .links-container {
-    ul.footer-links {
-      display: flex;
-      flex-direction: row;
-      li {
-        a {
-          color: inherit;
-          margin: 0 0 0 20px;
-          &:hover {
+  .content-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    .copyright{
+      margin-top: 35px;
+    }
+    .zbc-logo {
+      width: 80px;
+      height: auto;
+      margin: 0 0 20px;
+    }
+    .links-container {
+      margin-top: 35px;
+      ul.footer-links {
+        display: flex;
+        flex-direction: row;
+        li {
+          a {
             color: inherit;
+            margin: 0 0 0 20px;
+
+            &:hover {
+              color: inherit;
+            }
           }
         }
       }
     }
+
   }
 
   @include large-desktop {
@@ -36,30 +49,29 @@ footer {
   }
 
   @include desktop {
-
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 0 20px 0;
-
-    .copyright {
-      order: 2;
-
-    }
-    .footer-links {
-      order: 1;
-      margin: 0 0 20px;
+    .content-container{
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 0 20px 0;
+      .copyright {
+        order: 2;
+        margin-top: auto;
+      }
       .links-container{
-        ul.footer-links{
-          display: flex;
-          flex-direction: row;
-          border: 5px solid greenyellow;
-          li{
-            a{
-              margin: 0 0 0 0;
-            }
-          }
-        }
+        margin-top: auto;
+      }
+      .footer-links {
+        order: 1;
+        margin: 0 0 20px;
+      }
+      .footer-links .links-container ul.footer-links {
+        display: flex;
+        flex-direction: row;
+        border: 5px solid greenyellow;
+      }
+      .footer-links .links-container ul.footer-links li a {
+        margin: 0 0 0 0;
       }
     }
   }
@@ -68,32 +80,45 @@ footer {
     div {
       margin: 0 20px 20px 20px;
     }
-    .copyright {
-      text-align: center;
-    }
-    .links-container {
-      ul.footer-links{
-        flex-direction: column;
-        justify-content: center;
-        align-content: center;
+    .content-container {
+      flex-direction: column;
+      justify-content: center;
+      img.zbc-logo {
+        order: 1;
+      }
+      .copyright {
+        order: 3;
         text-align: center;
-        width: 100%;
-        margin: 0;
-        padding: 0;
+      }
+      .links-container {
+        order: 2;
+        align-items: center;
+        flex-direction: column;
 
-        li{
-          margin: 0 0 0 0;
-          padding: 0;
+        ul.footer-links {
+          flex-direction: column;
+          justify-content: center;
+          align-content: center;
           text-align: center;
-          a{
-            margin: 0;
+          width: 100%;
+          margin: 0;
+          padding: 0;
+
+          li {
+            margin: 0 0 0 0;
+            padding: 0;
+            text-align: center;
+
+            a {
+              margin: 0;
+            }
+
+            &:not(:last-child) {
+              margin: 0 0 10px 0;
+            }
           }
-         &:not(:last-child){
-           margin: 0 0 10px 0;
-         }
         }
       }
     }
   }
-
 }

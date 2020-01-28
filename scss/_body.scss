@@ -88,12 +88,8 @@ html {
             }
           }
 
-          &:first-child {
+          &:not(:last-child){
             margin: 0 0 20px;
-          }
-
-          &:last-child {
-            margin-right: 0;
           }
 
           a {
@@ -148,7 +144,7 @@ html {
         list-style: none;
         display: flex;
         flex-direction: row;
-        justify-content: space-evenly;
+        justify-content: space-between;
 
         li {
           max-width: 425px;
@@ -328,7 +324,6 @@ html {
 
             li {
               position: relative;
-              display: block;
               float: left;
               margin: 0;
               padding: 0;

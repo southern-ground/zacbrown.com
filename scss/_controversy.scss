@@ -1,0 +1,79 @@
+#controversy {
+  background-color: #251c12;
+  background-image: url("img/controversy/controversy-bg.jpg");
+  background-size: cover;
+  background-position: 50%;
+  position: absolute;
+  z-index: 9999;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+@media (max-width: 768px) {
+  #controversy {
+    background-position: 70% 50%;
+  }
+}
+
+#controversy.hidden {
+  display: none;
+  visibility: hidden;
+}
+
+#controversy a {
+  cursor: pointer;
+  line-height: 0;
+  font-size: 0;
+  color: transparent;
+}
+
+#controversy .logo {
+  position: absolute;
+  left: 25%;
+  top: 41vh;
+}
+
+@media (max-width: 768px) {
+  #controversy .logo {
+    position: relative;
+    left: 0;
+    top: 0;
+    margin: 0 auto;
+  }
+}
+
+#controversy .content {
+  text-align: center;
+  margin: 0 auto 50px;
+}
+
+#controversy .content a.continue {
+  margin: 0 0 20px;
+  display: inline-block;
+}
+
+#controversy .content a.social {
+  display: inline-block;
+  margin: 0 15px;
+}
+
+#controversy .content a.social img {
+  width: 28px;
+  height: auto;
+}
+
+html.takeover {
+  height: 100%;
+  overflow: hidden;
+}
+
+body.takeover {
+  height: 100%;
+  overflow: hidden;
+}
