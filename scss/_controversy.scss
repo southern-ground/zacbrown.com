@@ -1,6 +1,6 @@
 #controversy {
   background-color: #251c12;
-  background-image: url("img/controversy/controversy-bg.jpg");
+  background-image: url("img/always_and_never/always_never_bg.jpg");
   background-size: cover;
   background-position: 50%;
   position: absolute;
@@ -10,62 +10,63 @@
   width: 100%;
   height: 100%;
   display: flex;
+  justify-content: center;
   flex-direction: column;
-  justify-content: flex-end;
   align-items: center;
-}
 
-@media (max-width: 768px) {
-  #controversy {
-    background-position: 70% 50%;
+  .hidden {
+    display: none;
+    visibility: hidden;
   }
-}
 
-#controversy.hidden {
-  display: none;
-  visibility: hidden;
-}
-
-#controversy a {
-  cursor: pointer;
-  line-height: 0;
-  font-size: 0;
-  color: transparent;
-}
-
-#controversy .logo {
-  position: absolute;
-  left: 25%;
-  top: 41vh;
-}
-
-@media (max-width: 768px) {
-  #controversy .logo {
-    position: relative;
-    left: 0;
-    top: 0;
-    margin: 0 auto;
+  .logo {
+    margin: 0 0 60px;
+    @media (max-height: 500px) {
+      zoom: 0.8;
+      margin: 0 0 20px;
+    }
+    @media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait) {
+      zoom: 0.8;
+      margin: 0 0 20px;
+    }
   }
-}
 
-#controversy .content {
-  text-align: center;
-  margin: 0 auto 50px;
-}
+  a {
+    cursor: pointer;
+    line-height: 0;
+    font-size: 0;
+    color: transparent;
+    margin: 20px;
+  }
 
-#controversy .content a.continue {
-  margin: 0 0 20px;
-  display: inline-block;
-}
+  .content {
+    text-align: center;
 
-#controversy .content a.social {
-  display: inline-block;
-  margin: 0 15px;
-}
+    a.continue {
+      margin: 0 0 20px;
+      display: inline-block;
+    }
 
-#controversy .content a.social img {
-  width: 28px;
-  height: auto;
+    a.social {
+      display: inline-block;
+      margin: 10px 15px 0;
+
+      img {
+        width: 28px;
+        height: auto;
+      }
+    }
+
+    @media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait) {
+      a.listen, a.store {
+        display: block;
+      }
+    }
+
+    @media (max-height: 500px) {
+      display: block;
+    }
+  }
 }
 
 html.takeover {
